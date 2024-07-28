@@ -14,15 +14,14 @@ export default function App() {
   // convert the hex color to rgb
  
   const hexToRgb = (hex) => {
-    const bigint = parseInt(hex.slice(1), 16);
-    const r = (bigint >> 16) & 255;
-    const g = (bigint >> 8) & 255;
-    const b = bigint & 255;
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
     return `${r} ${g} ${b}`;
   };
 
-  // const rgbColor = "255 255 255"; // it can be done in one line
   const rgbColor = hexToRgb(color);
+  
 
   // get a random color from thecolorapi.com in json format using this URL
   const getRandomColor = async () => {
@@ -43,12 +42,15 @@ export default function App() {
   return (
     <main>
       
-      {/* Render an HEX color picker component here */}
-      <HexColorPicker color={color} onChange={handleColorChange} />
-      {/* Check docs https://github.com/omgovich/react-colorful */}
       <button onClick={getRandomColor}>Random Color</button>
+
+      <HexColorPicker color={color} onChange={handleColorChange} />
+     
       <div>The color in HEX is {color}</div>
       <div>The color in RGB is {rgbColor}</div>
+     
     </main>
-  );
-}
+   );
+ }
+
+
