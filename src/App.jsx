@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import "./App.css";
-import { HexColorPicker } from "react-colorful";
+import HexColorPickerComponent from './HexColorPickerComponent';
 
 export default function App() {
  
@@ -44,7 +44,7 @@ export default function App() {
       
       <button onClick={getRandomColor}>Random Color</button>
 
-      <HexColorPicker color={color} onChange={handleColorChange} />
+      <HexColorPickerComponent color={color} onChange={handleColorChange} />
      
       <div>The color in HEX is {color}</div>
       <div>The color in RGB is {rgbColor}</div>
