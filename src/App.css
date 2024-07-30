@@ -1,3 +1,9 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap'); */
+
+
+body {
+  font-family: 'Sono', sans-serif;
+} 
 
 main {
   display: flex;
@@ -8,8 +14,13 @@ main {
 }
 
 button {
-  border: 1px solid ;
-  padding:10px;
-  border-radius: 60px;
+  border: 1px solid rgb(195, 191, 191);
+  padding:16px;
+  border-radius: 40px;
   cursor:pointer;
+  box-shadow: 4px 4px 5px 0px rgba(173,170,170,1);
+}
+
+button:hover {
+  background-color: white;
 }

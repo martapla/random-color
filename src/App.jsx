@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import "./App.css";
-import HexColorPickerComponent from './HexColorPickerComponent';
+import HexColorPickerComponent from './components/HexColorPickerComponent'
 
 export default function App() {
  

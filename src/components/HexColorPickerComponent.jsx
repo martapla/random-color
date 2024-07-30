@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { HexColorPicker } from 'react-colorful';
 
 const HexColorPickerComponent = ({ color, onChange }) => {
